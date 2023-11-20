@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Workers } from 'src/app/models/workers';
+import { WorkersService } from 'src/app/services/workers.service';
 
 @Component({
   selector: 'app-workers-list',
@@ -10,26 +11,19 @@ import { Workers } from 'src/app/models/workers';
 })
 export class WorkersListComponent implements OnInit{
 
-  ELEMENT_DATA: Workers[] = [
-    {
-      id: "1",
-      name: "Marco Antonio",
-      cpf: "055.818.520-66",
-      phone: "(34)995565658",
-      start_date: '15/08/2022',
-      usertype: ['0']
-
-    }
-  ]
-  displayedColumns: string[] = ['id', 'name', 'cpf', 'phone', 'start_date', 'acoes'];
+  ELEMENT_DATA: Workers[] = [ ]
+  displayedColumns: string[] = ['id', 'name', 'cpf', 'phone', 'createdDate', 'acoes'];
   dataSource = new MatTableDataSource<Workers>(this.ELEMENT_DATA);
 
   
   
 
-constructor(){}
+constructor(
+  private service: WorkersService
+){}
 
   ngOnInit(): void {
+    this.findAll();
     
   }
 
@@ -37,6 +31,13 @@ constructor(){}
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  findAll(){
+    this.service.findAll().subscribe(usersResponse => {
+      this.ELEMENT_DATA = usersResponse;
+      this.dataSource = new MatTableDataSource<Workers>(usersResponse);
+    })
   }
 
 }

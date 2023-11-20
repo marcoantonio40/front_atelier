@@ -3,7 +3,7 @@ export interface Workers {
     name: string;
     cpf: string;
     phone: string;
-    start_date: any;
+    createdDate: any;
     usertype: string[];
 
 }
