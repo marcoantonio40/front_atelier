@@ -12,6 +12,6 @@ export class WorkersService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Workers[]>{
-    return this.http.get<Workers[]>(`${API_CONFIG.baseUrl}/users`);
+    return this.http.get<Workers[]>(`${API_CONFIG.baseUrl}/user/find-all`);
   }
 }
