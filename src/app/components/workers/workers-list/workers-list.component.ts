@@ -12,12 +12,11 @@ import { WorkersService } from 'src/app/services/workers.service';
 export class WorkersListComponent implements OnInit{
 
   ELEMENT_DATA: Workers[] = [ ]
-  displayedColumns: string[] = ['id', 'name', 'cpf', 'phone', 'createdDate', 'acoes'];
+  displayedColumns: string[] = ['name', 'cpf', 'phone', 'createdDate', 'acoes'];
   dataSource = new MatTableDataSource<Workers>(this.ELEMENT_DATA);
 
   
-  
-
+@ViewChild(MatPaginator) paginator: MatPaginator;
 constructor(
   private service: WorkersService
 ){}
@@ -27,17 +26,17 @@ constructor(
     
   }
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
-
   findAll(){
     this.service.findAll().subscribe(usersResponse => {
       this.ELEMENT_DATA = usersResponse;
       this.dataSource = new MatTableDataSource<Workers>(usersResponse);
+      this.dataSource.paginator = this.paginator;
     })
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }
