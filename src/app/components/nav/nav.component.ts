@@ -17,7 +17,7 @@ export class NavComponent implements OnInit{
     ){}
   
   ngOnInit(): void {
-    this.router.navigate(['home'])
+    this.router.navigate(['workers/create'])//home
     this.toast.success('Login realizado com sucesso', 'Login', {timeOut: 4000})
   }
 
