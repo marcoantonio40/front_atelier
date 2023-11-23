@@ -32,6 +32,7 @@ ngOnInit(): void {
 
 doLogin(){
   this.service.authenticate(this.creds).subscribe(response => {
+   localStorage.clear();
    this.service.successfulLogin(response.token);
    this.router.navigate(['']) 
   }, () => {
