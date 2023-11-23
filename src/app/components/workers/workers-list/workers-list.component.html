@@ -2,10 +2,10 @@
 
   <h1>Listando colaboradores</h1>
 
-  <button class="mat-elevation-z8" mat-stroked-button color="primary">Novo colaborador</button>
+  <button routerLink="create" class="mat-elevation-z8" mat-stroked-button color="primary">Novo colaborador</button>
   <mat-form-field>
     <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Fulano" #input>
   </mat-form-field>
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource">
