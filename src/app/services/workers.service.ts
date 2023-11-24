@@ -14,4 +14,8 @@ export class WorkersService {
   findAll(): Observable<Workers[]>{
     return this.http.get<Workers[]>(`${API_CONFIG.baseUrl}/user/find-all`);
   }
+
+  create(worker: Workers): Observable<Workers> {
+    return this.http.post<Workers>(`${API_CONFIG.baseUrl}/user//create-user`, worker)
+  }
 }

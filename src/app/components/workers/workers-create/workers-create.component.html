@@ -3,35 +3,36 @@
         <h1 class="fullWidth">Cadastrar novo colaborador</h1>
         <img class="fullWidth" src="assets/img/Sewing-woman-vintage.svg" alt="Novo colaborador">
 
+        
         <section class="section">
-            <mat-checkbox class="margin" color="primary">Super</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">Manager</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">User</mat-checkbox>
+            <mat-checkbox (click)="addRole('SUPER')" class="margin" color="primary">Super</mat-checkbox>
+            <mat-checkbox (click)="addRole('MANAGER')" class="margin" color="primary">Manager</mat-checkbox>
+            <mat-checkbox (click)="addRole('USER')" class="margin" color="primary">User</mat-checkbox>
           </section>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome:</mat-label>
-            <input [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="worker.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF:</mat-label>
-            <input [formControl]="cpf" required matInput placeholder="000.000.000-00"
+            <input [(ngModel)]="worker.cpf" name="cpf" [formControl]="cpf" required matInput placeholder="000.000.000-00"
             mask="000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Telefone:</mat-label>
-            <input [formControl]="phone" required matInput placeholder="(00)00000-0000"
+            <input [(ngModel)]="worker.phone" name="phone" [formControl]="phone" required matInput placeholder="(00)00000-0000"
             mask="(00)00000-0000">
             <mat-icon matSuffix>phone</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>E-mail:</mat-label>
-            <input [formControl]="email" required matInput placeholder="fulano@email.com" maxlength="40">
+            <input [(ngModel)]="worker.email" name="email" [formControl]="email" required matInput placeholder="fulano@email.com" maxlength="40">
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
 
