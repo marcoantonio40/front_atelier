@@ -20,7 +20,6 @@ img {
 
 .section{
     margin-bottom: 1rem;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -35,4 +34,15 @@ p {
 
 mat-icon{
     opacity: .6;
+}
+
+.margin{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+mat-radio-button{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }

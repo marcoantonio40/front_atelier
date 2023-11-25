@@ -16,6 +16,6 @@ export class WorkersService {
   }
 
   create(worker: Workers): Observable<Workers> {
-    return this.http.post<Workers>(`${API_CONFIG.baseUrl}/user//create-user`, worker)
+    return this.http.post<Workers>(`${API_CONFIG.baseUrl}/user/create-user`, worker)
   }
 }

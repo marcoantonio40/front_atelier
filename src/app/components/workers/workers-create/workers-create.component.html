@@ -3,12 +3,13 @@
         <h1 class="fullWidth">Cadastrar novo colaborador</h1>
         <img class="fullWidth" src="assets/img/Sewing-woman-vintage.svg" alt="Novo colaborador">
 
-        
         <section class="section">
-            <mat-checkbox (click)="addRole('SUPER')" class="margin" color="primary">Super</mat-checkbox>
-            <mat-checkbox (click)="addRole('MANAGER')" class="margin" color="primary">Manager</mat-checkbox>
-            <mat-checkbox (click)="addRole('USER')" class="margin" color="primary">User</mat-checkbox>
-          </section>
+          <mat-radio-group required>
+            <mat-radio-button (click)="addRole('SUPER')" class="margin" color="primary">Super</mat-radio-button>
+            <mat-radio-button (click)="addRole('MANAGER')"  class="margin" color="primary">Manager</mat-radio-button>
+            <mat-radio-button (click)="addRole('USER')"  class="margin" color="primary">User</mat-radio-button>
+          </mat-radio-group>
+        </section>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome:</mat-label>
@@ -36,7 +37,7 @@
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
 
-          <button [disabled]="!validFields()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
+          <button (click)="create()" [disabled]="!validFields()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
       
           <button routerLink="../" class="fullWidth mat-elevation-z4" mat-flat-button color="warn">Cancelar</button>
     </form>
