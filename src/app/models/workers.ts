@@ -3,8 +3,8 @@ export interface Workers {
     name: string;
     cpf: string;
     phone: string;
-    email: string;
+    login: string;
     createdDate?: string;
-    usertype: string;
+    type: string;
 
 }

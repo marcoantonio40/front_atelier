@@ -11,13 +11,12 @@ import { WorkersService } from 'src/app/services/workers.service';
   styleUrls: ['./workers-create.component.css']
 })
 export class WorkersCreateComponent implements OnInit{
-
   worker: Workers = {
     name: '',
     cpf: '',
     phone: '',
-    usertype: '',
-    email: ''
+    type: '',
+    login: ''
   }
 
   name: FormControl = new FormControl(null, [Validators.minLength(10), Validators.maxLength(50)]);
@@ -42,6 +41,7 @@ export class WorkersCreateComponent implements OnInit{
   }
 
   create(): void {
+    console.log(this.worker);
     this.service.create(this.worker).subscribe(() => {
         this.toast.success('Colaborador criado com suceso', 'Cadastro');
         this.router.navigate(['workers'])
@@ -55,9 +55,5 @@ export class WorkersCreateComponent implements OnInit{
         this.toast.error(ex.error.message);
       }
     })
-  }
-
-  addRole(role: string): void {
-    this.worker.usertype = role;
   }
 }

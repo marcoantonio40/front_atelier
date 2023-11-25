@@ -3,13 +3,15 @@
         <h1 class="fullWidth">Cadastrar novo colaborador</h1>
         <img class="fullWidth" src="assets/img/Sewing-woman-vintage.svg" alt="Novo colaborador">
 
-        <section class="section">
-          <mat-radio-group required>
-            <mat-radio-button (click)="addRole('SUPER')" class="margin" color="primary">Super</mat-radio-button>
-            <mat-radio-button (click)="addRole('MANAGER')"  class="margin" color="primary">Manager</mat-radio-button>
-            <mat-radio-button (click)="addRole('USER')"  class="margin" color="primary">User</mat-radio-button>
-          </mat-radio-group>
-        </section>
+        <mat-form-field>
+          <mat-label>Perfil:</mat-label>
+          <mat-select [(ngModel)]="worker.type" name="type">
+            <mat-option value="EMPLOYEE">Funcionário</mat-option>
+            <mat-option value="MANAGER">Gerente</mat-option>
+            <mat-option value="SUPER">Administrador</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome:</mat-label>
@@ -33,7 +35,7 @@
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>E-mail:</mat-label>
-            <input [(ngModel)]="worker.email" name="email" [formControl]="email" required matInput placeholder="fulano@email.com" maxlength="40">
+            <input [(ngModel)]="worker.login" name="email" [formControl]="email" required matInput placeholder="fulano@email.com" maxlength="40">
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
 
