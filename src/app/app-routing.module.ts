@@ -6,6 +6,7 @@ import { WorkersListComponent } from './components/workers/workers-list/workers-
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { WorkersCreateComponent } from './components/workers/workers-create/workers-create.component';
+import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
     path: '', component: NavComponent,canActivate: [AuthGuard], children: [
       {path: 'home', component: HomeComponent},
       {path: 'workers', component: WorkersListComponent},
-      {path: 'workers/create', component: WorkersCreateComponent}
+      {path: 'workers/create', component: WorkersCreateComponent},
+      {path: 'workers/update/:id', component: WorkersUpdateComponent}
     ]
   }
 ];
