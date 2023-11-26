@@ -23,3 +23,11 @@ h1 {
     text-align: center;
     margin-bottom: 1rem;
 }
+
+.edit {
+    color: rgb(67, 120, 211);
+}
+
+.delete {
+ color: rgb(207, 40, 40);
+}
