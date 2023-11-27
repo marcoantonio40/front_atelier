@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { WorkersCreateComponent } from './components/workers/workers-create/workers-create.component';
 import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component';
+import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'workers', component: WorkersListComponent},
       {path: 'workers/create', component: WorkersCreateComponent},
-      {path: 'workers/update/:id', component: WorkersUpdateComponent}
+      {path: 'workers/update/:id', component: WorkersUpdateComponent},
+      {path: 'workers/delete/:id', component: WorkersDeleteComponent}
     ]
   }
 ];
