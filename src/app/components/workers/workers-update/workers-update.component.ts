@@ -23,6 +23,7 @@ export class WorkersUpdateComponent implements OnInit{
   cpf: FormControl = new FormControl(null, [Validators.minLength(11), Validators.maxLength(11), Validators.required]);
   phone: FormControl = new FormControl(null, [Validators.minLength(11), Validators.maxLength(11)]);
   email: FormControl = new FormControl(null, Validators.email);
+  type: FormControl = new FormControl(null, Validators.required);
 
   constructor(
     private service: WorkersService,
@@ -40,7 +41,8 @@ export class WorkersUpdateComponent implements OnInit{
     return this.name.valid && 
     this.cpf.valid && 
     this.email.valid && 
-    this.phone.valid;
+    this.phone.valid &&
+    this.type.valid;
   }
 
   findById(): void {
