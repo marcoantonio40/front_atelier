@@ -37,7 +37,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { WorkersCreateComponent } from './components/workers/workers-create/workers-create.component';
 import { NgxMaskModule } from 'ngx-mask';
-import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component'
+import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component';
+import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component'
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { WorkersUpdateComponent } from './components/workers/workers-update/work
     WorkersListComponent,
     LoginComponent,
     WorkersCreateComponent,
-    WorkersUpdateComponent
+    WorkersUpdateComponent,
+    WorkersDeleteComponent
   ],
   imports: [
     BrowserModule,
