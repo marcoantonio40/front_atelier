@@ -5,7 +5,7 @@
 
         <mat-form-field>
           <mat-label>Perfil:</mat-label>
-          <mat-select [(ngModel)]="worker.type" name="type">
+          <mat-select [(ngModel)]="worker.type" [formControl]="type" name="type">
             <mat-option value="EMPLOYEE">Funcionário</mat-option>
             <mat-option value="MANAGER">Gerente</mat-option>
             <mat-option value="SUPER">Administrador</mat-option>

@@ -20,14 +20,14 @@ export class WorkersService {
   }
 
   create(worker: Workers): Observable<Workers> {
-    return this.http.post<Workers>(`${API_CONFIG.baseUrl}/user/create-user`, worker)
+    return this.http.post<Workers>(`${API_CONFIG.baseUrl}/user/create`, worker)
   }
 
   update(worker: Workers): Observable<Workers> {
-    return this.http.put<Workers>(`${API_CONFIG.baseUrl}/user/update-user/${worker.id}`, worker)
+    return this.http.put<Workers>(`${API_CONFIG.baseUrl}/user/update/${worker.id}`, worker)
   }
 
   delete(id: any): Observable<Workers> {
-    return this.http.delete<Workers>(`${API_CONFIG.baseUrl}/user/delete-user/${id}`)
+    return this.http.delete<Workers>(`${API_CONFIG.baseUrl}/user/delete/${id}`)
   }
 }
