@@ -14,13 +14,13 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {
     path: '', component: NavComponent,canActivate: [AuthGuard], children: [
-      {path: 'home', component: HomeComponent},
-      {path: 'workers', component: WorkersListComponent},
-      {path: 'workers/create', component: WorkersCreateComponent},
-      {path: 'workers/update/:id', component: WorkersUpdateComponent},
-      {path: 'workers/delete/:id', component: WorkersDeleteComponent},
+      {path: 'home',                  component: HomeComponent},
+      {path: 'workers',               component: WorkersListComponent},
+      {path: 'workers/create',        component: WorkersCreateComponent},
+      {path: 'workers/update/:id',    component: WorkersUpdateComponent},
+      {path: 'workers/delete/:id',    component: WorkersDeleteComponent},
 
-      {path: 'customers', component: CustomersListComponent}
+      {path: 'customers',             component: CustomersListComponent}
     ]
   }
 ];
