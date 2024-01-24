@@ -38,7 +38,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { WorkersCreateComponent } from './components/workers/workers-create/workers-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component';
-import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component'
+import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component';
+import { CustomersListComponent } from './components/customers/customers-list/customers-list.component'
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { WorkersDeleteComponent } from './components/workers/workers-delete/work
     LoginComponent,
     WorkersCreateComponent,
     WorkersUpdateComponent,
-    WorkersDeleteComponent
+    WorkersDeleteComponent,
+    CustomersListComponent
   ],
   imports: [
     BrowserModule,
