@@ -4,6 +4,6 @@ export interface Customers {
     email: string;
     cpfOrCnpj: string;
     phone: string;
-    birthDay: Date;
+    birthDay: string;
     createdDate?: string;
 }
