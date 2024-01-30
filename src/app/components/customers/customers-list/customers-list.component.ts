@@ -37,4 +37,6 @@ export class CustomersListComponent implements OnInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // Preciso criar os métodos para buscar os clientes e os endereços
+
 }
