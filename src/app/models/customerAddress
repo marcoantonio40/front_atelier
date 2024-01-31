@@ -4,6 +4,5 @@ export interface CustomersAddress {
     number: string;
     neighborhood: string;
     cep: string;
-    birthDay: string;
     complement: string;
 }
