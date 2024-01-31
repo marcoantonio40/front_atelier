@@ -14,7 +14,7 @@ export class CustomersListComponent implements OnInit{
 
   ELEMENT_DATA: Customers[] = [
     {
-      
+      id: '12345',
       name: 'Marco Antonio',
       email: 'marco@marco.com',
       cpfOrCnpj: '06652091933',
