@@ -10,6 +10,7 @@ import { WorkersUpdateComponent } from './components/workers/workers-update/work
 import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component';
 import { CustomersListComponent } from './components/customers/customers-list/customers-list.component';
 import { AddressViewComponent } from './components/customer-address/address-view/address-view.component';
+import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,7 +23,9 @@ const routes: Routes = [
       {path: 'workers/delete/:id',    component: WorkersDeleteComponent},
 
       {path: 'customers',             component: CustomersListComponent},
-      {path: 'customers/address/:id', component: AddressViewComponent}
+      {path: 'customers/create',      component: CustomersCreateComponent},
+      {path: 'customers/address/:id', component: AddressViewComponent},
+      
 
     ]
   }
