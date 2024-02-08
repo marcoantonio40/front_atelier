@@ -40,7 +40,8 @@ import { NgxMaskModule } from 'ngx-mask';
 import { WorkersUpdateComponent } from './components/workers/workers-update/workers-update.component';
 import { WorkersDeleteComponent } from './components/workers/workers-delete/workers-delete.component';
 import { CustomersListComponent } from './components/customers/customers-list/customers-list.component';
-import { AddressViewComponent } from './components/customer-address/address-view/address-view.component'
+import { AddressViewComponent } from './components/customer-address/address-view/address-view.component';
+import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component'
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AddressViewComponent } from './components/customer-address/address-view
     WorkersUpdateComponent,
     WorkersDeleteComponent,
     CustomersListComponent,
-    AddressViewComponent
+    AddressViewComponent,
+    CustomersCreateComponent
   ],
   imports: [
     BrowserModule,
