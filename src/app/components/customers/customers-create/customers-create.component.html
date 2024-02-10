@@ -29,11 +29,20 @@
             <mat-icon matSuffix>phone</mat-icon>
           </mat-form-field>
 
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+<!-- 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nascimento:</mat-label>
             <input [(ngModel)]="customer.birthDay" name="birthDay" [formControl]="birthDay" required matInput placeholder="01/01/1999" maxlength="40">
             <mat-icon matSuffix>date_range</mat-icon>
-          </mat-form-field>
+          </mat-form-field> -->
 
           <button (click)="create()" [disabled]="!validFields()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
       

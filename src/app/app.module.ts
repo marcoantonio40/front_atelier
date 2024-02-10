@@ -42,6 +42,7 @@ import { WorkersDeleteComponent } from './components/workers/workers-delete/work
 import { CustomersListComponent } from './components/customers/customers-list/customers-list.component';
 import { AddressViewComponent } from './components/customer-address/address-view/address-view.component';
 import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component'
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { CustomersCreateComponent } from './components/customers/customers-creat
     MatTableModule,
     MatIconModule,
     MatListModule,
+    MatDatepickerModule,
     MatCardModule,
     ToastrModule.forRoot({
       timeOut: 4000,
