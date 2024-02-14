@@ -43,6 +43,7 @@ import { CustomersListComponent } from './components/customers/customers-list/cu
 import { AddressViewComponent } from './components/customer-address/address-view/address-view.component';
 import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component'
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatListModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatCardModule,
     ToastrModule.forRoot({
       timeOut: 4000,
