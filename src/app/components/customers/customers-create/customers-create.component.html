@@ -31,7 +31,7 @@
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nascimento</mat-label>
-            <input matInput [matDatepicker]="picker" required>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="customer.birthDay"  [formControl]="birthDay" required>
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
