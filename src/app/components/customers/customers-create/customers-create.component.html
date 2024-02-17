@@ -36,6 +36,36 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
+<!-- Address -->
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Rua:</mat-label>
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Número:</mat-label>
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Bairro:</mat-label>
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>CEP:</mat-label>
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Complemento:</mat-label>
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
 
           <button (click)="create()" [disabled]="!validFields()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
       
