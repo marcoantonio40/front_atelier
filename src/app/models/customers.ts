@@ -1,3 +1,5 @@
+import { CustomersAddress } from "./customerAddress";
+
 export interface Customers {
     id?: string;
     name: string;
@@ -6,4 +8,5 @@ export interface Customers {
     phone: string;
     birthDay: string;
     createdDate?: string;
+    address: CustomersAddress;
 }

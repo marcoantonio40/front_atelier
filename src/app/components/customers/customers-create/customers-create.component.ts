@@ -16,7 +16,8 @@ export class CustomersCreateComponent implements OnInit{
     email: '',
     cpfOrCnpj: '',
     phone: '',
-    birthDay: ''
+    birthDay: '',
+    address: null
   }
 
   name: FormControl = new FormControl(null, [Validators.minLength(10), Validators.maxLength(50)]);

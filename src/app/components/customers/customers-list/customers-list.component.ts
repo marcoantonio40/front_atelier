@@ -21,7 +21,7 @@ export class CustomersListComponent implements OnInit{
       phone:'32991658989',
       createdDate: '21/06/2023',
       birthDay: '21/06/2023',
-
+      address: null
     }
 ]
   displayedColumns: string[] = ['name', 'email','cpfOrCnpj', 'phone', 'createdDate', 'birthDay', 'acoes'];
