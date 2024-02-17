@@ -26,6 +26,12 @@ export class CustomersCreateComponent implements OnInit{
   phone: FormControl = new FormControl(null, [Validators.minLength(11), Validators.maxLength(11)]);
   birthDay: FormControl = new FormControl(null, Validators.required);
 
+  street: FormControl = new FormControl(null, [Validators.minLength(2), Validators.maxLength(50)]);
+  number: FormControl = new FormControl(null, [Validators.minLength(1), Validators.maxLength(5)]);
+  neighborhood: FormControl = new FormControl(null, [Validators.minLength(3), Validators.maxLength(30)]);
+  cep: FormControl = new FormControl(null, [Validators.minLength(8), Validators.maxLength(8)]);
+  complement: FormControl = new FormControl(null, [Validators.minLength(3), Validators.maxLength(50)]);
+
   constructor(
     private service: CustomersService,
     private toast: ToastrService,

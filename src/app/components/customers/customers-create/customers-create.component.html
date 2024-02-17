@@ -35,7 +35,7 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-          <!-- Address -->
+<!-- Address -->
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Rua:</mat-label>
             <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
@@ -62,7 +62,7 @@
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Complemento:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="name" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.name" name="name" [formControl]="name" matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
