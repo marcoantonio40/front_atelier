@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CustomersAddress } from 'src/app/models/customerAddress';
 import { Customers } from 'src/app/models/customers';
 import { CustomersService } from 'src/app/services/customers.service';
 
@@ -11,13 +12,21 @@ import { CustomersService } from 'src/app/services/customers.service';
   styleUrls: ['./customers-create.component.css']
 })
 export class CustomersCreateComponent implements OnInit{
+  address: CustomersAddress = {
+    street: '',
+    number: '',
+    neighborhood: '',
+    cep: '',
+    complement: ''
+
+  }
   customer: Customers = {
     name: '',
     email: '',
     cpfOrCnpj: '',
     phone: '',
     birthDay: '',
-    address: null
+    address: this.address
   }
 
   name: FormControl = new FormControl(null, [Validators.minLength(10), Validators.maxLength(50)]);
