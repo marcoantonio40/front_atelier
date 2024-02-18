@@ -41,31 +41,31 @@
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Rua:</mat-label>
             <input [(ngModel)]="customer.address.street" name="street" [formControl]="street" required matInput placeholder="Rua de Tal" maxlength="50">
-            <mat-icon matSuffix>person</mat-icon>
+            <mat-icon matSuffix>house</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Número:</mat-label>
             <input [(ngModel)]="customer.address.number" name="number" [formControl]="number" required matInput placeholder="1111" maxlength="5">
-            <mat-icon matSuffix>person</mat-icon>
+            <mat-icon matSuffix>house</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Bairro:</mat-label>
             <input [(ngModel)]="customer.address.neighborhood" name="neighborhood" [formControl]="neighborhood" required matInput placeholder="Centro" maxlength="30">
-            <mat-icon matSuffix>person</mat-icon>
+            <mat-icon matSuffix>house</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CEP:</mat-label>
             <input [(ngModel)]="customer.address.cep" name="cep" [formControl]="cep" required matInput placeholder="11.111-111" mask="00.000-000" maxlength="10">
-            <mat-icon matSuffix>person</mat-icon>
+            <mat-icon matSuffix>house</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Complemento:</mat-label>
             <input [(ngModel)]="customer.address.complement" name="complement" [formControl]="complement" matInput placeholder="Próximo ao lugar tal" maxlength="50">
-            <mat-icon matSuffix>person</mat-icon>
+            <mat-icon matSuffix>house</mat-icon>
           </mat-form-field>
 
           <button (click)="create()" [disabled]="!validFields()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
