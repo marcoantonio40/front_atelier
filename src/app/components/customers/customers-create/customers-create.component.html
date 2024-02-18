@@ -35,7 +35,9 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-<!-- Address -->
+        
+          <h2>Endereço</h2>
+
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Rua:</mat-label>
             <input [(ngModel)]="customer.address.street" name="street" [formControl]="street" required matInput placeholder="Rua de Tal" maxlength="50">
