@@ -38,31 +38,31 @@
 <!-- Address -->
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Rua:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="street" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.address.street" name="street" [formControl]="street" required matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Número:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="number" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.address.number" name="number" [formControl]="number" required matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Bairro:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="neighborhood" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.address.neighborhood" name="neighborhood" [formControl]="neighborhood" required matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CEP:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="cep" required matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.address.cep" name="cep" [formControl]="cep" required matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Complemento:</mat-label>
-            <input [(ngModel)]="customer.name" name="name" [formControl]="complement" matInput placeholder="Fulano de Tal" maxlength="50">
+            <input [(ngModel)]="customer.address.complement" name="complement" [formControl]="complement" matInput placeholder="Fulano de Tal" maxlength="50">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
